@@ -87,7 +87,7 @@ There are several ways you can get Shaka Packager.
 - Get prebuilt binaries from
   [release](https://github.com/shaka-project/shaka-packager/releases).
 - Built from source, see
-  [Build Instructions](https://github.com/shaka-project/shaka-packager/blob/main/docs/source/build_instructions.md)
+  [Build Instructions](docs/source/build_instructions.md)
   for details.
 
 # Useful Links

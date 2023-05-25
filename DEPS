@@ -55,7 +55,7 @@ deps = {
     Var("chromium_git") + "/chromium/src/third_party/zlib@830b5c25b5fbe37e032ea09dd011d57042dd94df",  #408157
 
   "src/packager/tools/gyp":
-    Var("chromium_git") + "/external/gyp@caa60026e223fc501e8b337fd5086ece4028b1c6",
+    Var("github") + "/xieyubo/gyp@e201bc22d6aa127bd1bcde2ca4734e19ab3e8db7",
 }
 
 deps_os = {

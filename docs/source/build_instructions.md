@@ -36,7 +36,7 @@ Note that `Git` must be v1.7.5 or above.
 
 ## Windows system requirements
 
-* Visual Studio 2015 Update 3, 2017, or 2019. (See below.)
+* Visual Studio 2015 Update 3, 2017, 2019 or 2022. (See below.)
 * Windows 7 or newer.
 
 Install Visual Studio 2015 Update 3 or later - Community Edition should work if
@@ -46,12 +46,18 @@ its license is appropriate for you. Use the Custom Install option and select:
 - Universal Windows Apps Development Tools > Tools (1.4.1) and Windows 10 SDK
   (10.0.14393)
 
-If using VS 2017 or VS 2019, you must set the following environment variables,
+If using VS 2017, VS 2019 or VS2022 you must set the following environment variables,
 with versions and paths adjusted to match your actual system:
 
 ```shell
-GYP_MSVS_VERSION="2019"
-GYP_MSVS_OVERRIDE_PATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community"
+set GYP_MSVS_VERSION=2019
+set GYP_MSVS_OVERRIDE_PATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community
+```
+
+If you use VS 2022, you must set the following additional environment variables:
+
+```shell
+set GYP_MSVS_OVERRIDE_VCVARS_VER=14.1
 ```
 
 ## Install `depot_tools`
@@ -60,7 +66,6 @@ Clone a particular branch of the `depot_tools` repository from Chromium:
 
 ```shell
 git clone -b chrome/4147 https://chromium.googlesource.com/chromium/tools/depot_tools.git
-touch depot_tools/.disable_auto_update
 ```
 
 The latest version of depot_tools will not work, so please use that branch!
@@ -116,7 +121,7 @@ Run the `gclient` tool from `depot_tools` to check out the code and its
 dependencies.
 
 ```shell
-gclient config https://github.com/shaka-project/shaka-packager.git --name=src --unmanaged
+gclient config https://github.com/xieyubo/shaka-packager.git --name=src --unmanaged
 gclient sync
 ```
 
